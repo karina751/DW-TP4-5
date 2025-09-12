@@ -8,9 +8,9 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="bg-white text-dark-green">
       <Navbar />
-      <div className="container">
+      <div className="container mt-4">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tareas" element={<TareasPage />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/tarea/:id" element={<TareaDetallePage />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
 

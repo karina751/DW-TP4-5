@@ -6,7 +6,6 @@ const TareasPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simula una llamada a la API
     setTimeout(() => {
       const tareasMock = [
         { id: 1, titulo: 'Aprender React Router' },
@@ -16,25 +15,48 @@ const TareasPage = () => {
       setTareas(tareasMock);
       setLoading(false);
     }, 1000);
-  }, []); // El array de dependencias vacío [] asegura que el efecto se ejecute solo una vez al montar el componente
+  }, []);
 
   if (loading) {
-    return <div>Cargando tareas...</div>;
+    return (
+      <div className="d-flex justify-content-center my-5">
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Cargando...</span>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div>
-      <h1>Lista de Tareas</h1>
+    <div className="my-5 card-custom p-4">
+      <h1 className="text-center mb-4 text-dark-green">Lista de Tareas</h1>
       {tareas.length > 0 ? (
-        <ul>
-          {tareas.map((tarea) => (
-            <li key={tarea.id}>
-              <Link to={`/tarea/${tarea.id}`}>{tarea.titulo}</Link>
-            </li>
-          ))}
-        </ul>
+        <div className="table-responsive">
+          <table className="table table-hover table-striped">
+            <thead>
+              <tr className="bg-dark-green text-white">
+                <th scope="col">ID</th>
+                <th scope="col">Título de la Tarea</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tareas.map((tarea) => (
+                <tr key={tarea.id} className="text-dark-green">
+                  <td>{tarea.id}</td>
+                  <td>{tarea.titulo}</td>
+                  <td>
+                    <Link to={`/tarea/${tarea.id}`} className="btn btn-sm btn-outline-success animated-btn">
+                      Ver Detalles
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       ) : (
-        <p>No hay tareas disponibles.</p>
+        <p className="text-center text-dark-green">No hay tareas disponibles.</p>
       )}
     </div>
   );

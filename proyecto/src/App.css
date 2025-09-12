@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #2e7d32; /* Verde oscuro para el texto */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-dark-green {
+  background-color: #2e7d32; /* Verde oscuro */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-dark-green {
+  color: #2e7d32; /* Verde oscuro */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f1f8e9; /* Un verde muy claro para el contenedor */
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto 3D */
 }
 
-.App-link {
-  color: #61dafb;
+.animated-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.animated-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

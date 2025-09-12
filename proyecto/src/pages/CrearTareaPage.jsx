@@ -13,21 +13,28 @@ const CrearTareaPage = () => {
   };
 
   return (
-    <div>
-      <h1>Crear Nueva Tarea</h1>
+    <div className="my-5 card-custom p-4">
+      <h1 className="text-center mb-4 text-dark-green">Crear Nueva Tarea</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="titulo">Título de la Tarea:</label>
+        <div className="mb-3">
+          <label htmlFor="titulo" className="form-label text-dark-green">
+            Título de la Tarea:
+          </label>
           <input
             id="titulo"
             type="text"
+            className="form-control"
             {...register('titulo', { required: true })}
           />
           {errors.titulo && (
-            <span style={{ color: 'red' }}>Este campo es obligatorio.</span>
+            <span className="text-danger">Este campo es obligatorio.</span>
           )}
         </div>
-        <button type="submit">Crear Tarea</button>
+        <div className="d-grid">
+          <button type="submit" className="btn bg-dark-green text-white btn-lg animated-btn">
+            Crear Tarea
+          </button>
+        </div>
       </form>
     </div>
   );
