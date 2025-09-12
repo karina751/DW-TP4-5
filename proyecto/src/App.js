@@ -8,9 +8,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="bg-white text-dark-green">
+    <div className="fondo-blanco texto-verde-oscuro">
       <Navbar />
-      <div className="container mt-4">
+      <div className="contenedor-principal mt-4">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tareas" element={<TareasPage />} />

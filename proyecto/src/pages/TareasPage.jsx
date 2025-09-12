@@ -28,13 +28,13 @@ const TareasPage = () => {
   }
 
   return (
-    <div className="my-5 card-custom p-4">
-      <h1 className="text-center mb-4 text-dark-green">Lista de Tareas</h1>
+    <div className="my-5 contenedor-tabla p-4">
+      <h1 className="text-center mb-4 texto-verde-oscuro">Lista de Tareas</h1>
       {tareas.length > 0 ? (
         <div className="table-responsive">
           <table className="table table-hover table-striped">
             <thead>
-              <tr className="bg-dark-green text-white">
+              <tr className="bg-verde-oscuro text-white">
                 <th scope="col">ID</th>
                 <th scope="col">Título de la Tarea</th>
                 <th scope="col">Acciones</th>
@@ -42,11 +42,11 @@ const TareasPage = () => {
             </thead>
             <tbody>
               {tareas.map((tarea) => (
-                <tr key={tarea.id} className="text-dark-green">
+                <tr key={tarea.id} className="texto-verde-oscuro">
                   <td>{tarea.id}</td>
                   <td>{tarea.titulo}</td>
                   <td>
-                    <Link to={`/tarea/${tarea.id}`} className="btn btn-sm btn-outline-success animated-btn">
+                    <Link to={`/tarea/${tarea.id}`} className="btn btn-sm btn-outline-success boton-animado">
                       Ver Detalles
                     </Link>
                   </td>
@@ -56,7 +56,7 @@ const TareasPage = () => {
           </table>
         </div>
       ) : (
-        <p className="text-center text-dark-green">No hay tareas disponibles.</p>
+        <p className="text-center texto-verde-oscuro">No hay tareas disponibles.</p>
       )}
     </div>
   );

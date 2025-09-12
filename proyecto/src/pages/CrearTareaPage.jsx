@@ -13,29 +13,31 @@ const CrearTareaPage = () => {
   };
 
   return (
-    <div className="my-5 card-custom p-4">
-      <h1 className="text-center mb-4 text-dark-green">Crear Nueva Tarea</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-3">
-          <label htmlFor="titulo" className="form-label text-dark-green">
-            Título de la Tarea:
-          </label>
-          <input
-            id="titulo"
-            type="text"
-            className="form-control"
-            {...register('titulo', { required: true })}
-          />
-          {errors.titulo && (
-            <span className="text-danger">Este campo es obligatorio.</span>
-          )}
-        </div>
-        <div className="d-grid">
-          <button type="submit" className="btn bg-dark-green text-white btn-lg animated-btn">
-            Crear Tarea
-          </button>
-        </div>
-      </form>
+    <div className="d-flex justify-content-center my-5"> {/* Centra el contenido horizontalmente */}
+      <div className="col-md-6"> {/* Limita el ancho del formulario a la mitad en pantallas medianas y grandes */}
+        <h1 className="text-center mb-4 texto-verde-oscuro">Crear Nueva Tarea</h1>
+        <form onSubmit={handleSubmit(onSubmit)} className="p-4 bg-light rounded shadow"> {/* Añadimos padding y estilo al formulario */}
+          <div className="mb-3">
+            <label htmlFor="titulo" className="form-label texto-verde-oscuro">
+              Título de la Tarea:
+            </label>
+            <input
+              id="titulo"
+              type="text"
+              className="form-control"
+              {...register('titulo', { required: true })}
+            />
+            {errors.titulo && (
+              <span className="text-danger">Este campo es obligatorio.</span>
+            )}
+          </div>
+          <div className="d-flex justify-content-center mt-4"> {/* Centra el botón */}
+            <button type="submit" className="btn btn-success btn-sm boton-animado"> {/* btn-sm lo hace más pequeño */}
+              Crear Tarea
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

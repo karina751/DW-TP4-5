@@ -1,34 +1,31 @@
-body {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: #2e7d32; /* Verde oscuro para el texto */
+/* Estilos personalizados */
+.texto-verde-oscuro {
+  color: #2e7d32;
 }
 
-.bg-dark-green {
-  background-color: #2e7d32; /* Verde oscuro */
-}
-
-.text-dark-green {
-  color: #2e7d32; /* Verde oscuro */
-}
-
-.container {
-  max-width: 960px;
-  margin: auto;
-  padding: 2rem;
-  background-color: #f1f8e9; /* Un verde muy claro para el contenedor */
+.contenedor-tabla {
+  background-color: #f1f8e9;
   border-radius: 10px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto 3D */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.animated-btn {
+.boton-animado {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.animated-btn:hover {
+.boton-animado:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el botón con contorno verde oscuro */
+.btn-outline-success {
+  color: #2e7d32 !important;
+  border-color: #2e7d32 !important;
+}
+
+/* Estilo del botón al pasar el mouse (hover) */
+.btn-outline-success:hover {
+  background-color: #2e7d32 !important;
+  color: white !important;
 }
