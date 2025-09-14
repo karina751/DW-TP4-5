@@ -16,7 +16,7 @@ const CrearTareaPage = () => {
     <div className="d-flex justify-content-center my-5"> {/* Centra el contenido horizontalmente */}
       <div className="col-md-6"> {/* Limita el ancho del formulario a la mitad en pantallas medianas y grandes */}
         <h1 className="text-center mb-4 texto-verde-oscuro">Crear Nueva Tarea</h1>
-        <form onSubmit={handleSubmit(onSubmit)} className="p-4 bg-light rounded shadow"> {/* Añadimos padding y estilo al formulario */}
+        <form onSubmit={handleSubmit(onSubmit)} className="p-4 bg-light rounded shadow"> {/* Añadi padding y estilo al formulario */}
           <div className="mb-3">
             <label htmlFor="titulo" className="form-label texto-verde-oscuro">
               Título de la Tarea:
